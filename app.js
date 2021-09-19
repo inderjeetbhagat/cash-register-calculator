@@ -6,11 +6,14 @@ const errorMessage = document.querySelector("#error-message")
 checkButton.addEventListener("click", function validateAmount() {
     errorMessage.style.display = "none";
     if(billAmount.value > 0){
-        if(cashGiven.value >= billAmount.value){
-
+        if(cashGiven.value > billAmount.value){
+            
+            const amountToBeReturned = cashGiven.value - billAmount.value;
+            console.log(amountToBeReturned);
         } else {
             showMessage("Are you planning to wash dishes here?!");
-            console.log("here");
+           
+            
         
         }
 
